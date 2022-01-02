@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>-Ecomerce Product Web-Site</title>
+        <link rel="stylesheet" href="prudract.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    </head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+               <a href="http://127.0.0.1:5500/prudract.html"><img src="images/logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuON">
+                    <li><a href="http://127.0.0.1:5500/prudract.html">Home</a></li>
+                    <li><a href="http://127.0.0.1:5500/All%20Product.html">Products</a></li>
+                    <li><a href="$$">About</a></li>
+                    <li><a href="http://127.0.0.1:5500/contact.html">Contact</a></li>
+                    <li><a href="http://127.0.0.1:5500/register-login.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href=""><img src="images/cart.png" width="30px"></a>
+            <img src="images/menu.png" class="manu-icon" onclick="MenuOF()">
+        </div>
+    </div>
+<!----------------------Acaunt-page------------------------->
+<div class="accaunt-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" alt="">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator"/>
+                    </div>
+                    <form id="loginform">
+                        <input type="text" placeholder="User name">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="#">Forget password</a>
+                    </form>
+                    <form id="regform">
+                        <input type="text" placeholder="User name">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="passworld">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------Footer----------------------->
+  <div class="footer">
+      <div class="small-container">
+          <div class="row">
+              <div class="footer-col1">
+                 <h3>Downloade our App</h3>
+                 <p>Downloade App for Android and ios mobile Phone.</p>
+                 <div class="app-logo">
+                     <img src="images/play-store.png" alt="">
+                     <img src="images/App-store.png" alt="">
+                 </div>
+              </div>
+
+              <div class="footer-col2">
+                <img src="images/logo.png" alt="">
+                <p>Our Pushoce is to Sustainably Make the Ploasuce and<br> 
+                   Benifits of Sports Accesibale to the Many.</p>
+             </div>
+
+             <div class="footer-col3">
+                <h3>Useful Links</h3>
+               <ul>
+                   <li>Cunpons</li>
+                   <li>Big Post</li>
+                   <li>Return Policy</li>
+                   <li>Join Affilate</li>
+               </ul>
+             </div>
+             <div class="footer-col4">
+                <h3>Follw Us</h3>
+               <ul>
+                   <li>Facebook</li>
+                   <li>Twitter</li>
+                   <li>Instagram</li>
+                   <li>YouTube</li>
+               </ul>
+             </div>
+          </div>
+      </div>
+      <hr>
+      <p class="copyright">Copyright@-Ecomerce Web Site</p>
+  </div>
+  <!--------------------simpul Javascript used manu-icon-------------------->
+  <script>
+      var MenuON = document.getElementById("MenuON");
+
+      MenuON.style.maxHeight = "0px";
+
+  function MenuOF(){
+
+      if(MenuON.style.maxHeight == "0px")
+      {
+         MenuON.style.maxHeight = "200px"
+      }
+
+    else{
+        MenuON.style.maxHeight = "0px"
+    }
+  }
+  </script>
+  <!--------------------Js Indicator account------------------------>
+  <script>
+      var loginform = document.getElementById("loginform");
+      var  regform = document.getElementById("regform");
+      var indicator = document.getElementById('Indicator');
+
+      function register(){
+          regform.style.transform = "translateX(0px)";
+          loginform.style.transform = "translateX(0px)";
+          indicator.style.transform = "translateX(100px)";
+      }
+      function login(){
+          regform.style.transform = "translateX(300px)";
+          loginform.style.transform = "translateX(300px)";
+          indicator.style.transform = "translateX(0px)"
+      }
+  </script>
+</body>
+</html>
